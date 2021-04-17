@@ -1,0 +1,92 @@
+//Подключение вендеров:
+@import './add/vender/normalize';
+
+//Подключение переменных:
+@import './add/vars/vars';
+
+//Подключение миксинов:
+@import './add/mixins/continer';
+@import './add/mixins/breakpoint';
+//Миксин преобразования шрифтов:
+@import './add/mixins/font-face';
+
+//Миксин адаптации шрифта
+@import './add/mixins/adaptiv-font';
+
+
+
+
+/*-Подключение шрифтов-*/
+// Перенести шрифты из файла:#src/scss/moduls/mixins/_fonts.scss'
+@include font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Bold", 700);
+@include font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Normal", 400);
+//font-family: 'HelveticaNeueCyr', sans-serif;
+
+// Прямое подключение шрифтов::after
+
+//font-family: 'Roboto', sans-serif;
+//-------------------------------------------------------------------------------------------------
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $accent;
+	font-size: 1.5rem;
+	color: $white;
+	font-family: 'HelveticaNeueCyr', sans-serif;
+
+}
+
+.main {
+	// font-family: 'Barlow', sans-serif;
+	// font-weight: regular;
+}
+
+$maxWidth: 1580; //Максимальная ширина контента для мексина adaptiv-font.
+$padding: 16px; //padding контента для мексина adaptiv-font.
+
+.container {
+	@include container($maxWidth, $padding);
+}
+
+.h1-title {
+	//styleName: H1;
+	@include adaptiv-font(56, 30);
+	//font-size: 5.6rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.h2-title {
+
+	//@include adaptiv-font(56, 32);
+	@include adaptiv-font(24, 20);
+	//font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+.zi-10{
+	z-index: 10;
+}
+.zi-img-11{
+	z-index: 11;
+}
+.zi-20{
+	z-index: 20;
+}
+.zi-img-21{
+	z-index: 21;
+}
+.zi-30{
+	z-index: 30;
+}
+.zi-img-31{
+	z-index: 31;
+}
+
+
+@import "./moduls/dropdown";
+@import "./moduls/straight-car";
