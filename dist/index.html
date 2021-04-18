@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link href="libs/icons/iconsfont.css" rel="stylesheet" />
+    
+    <title>FTL</title></head>
+
+<body>
+    <!-- Main -->
+    <main class="main">
+       <div class="container">
+           <section class="straight-car">
+               <h1 class="h1-title straight-car__title">FTL: Прямая машина</h2>
+                   <form class="straight-car__form" action="/">
+                       <!-- Маршрут -->
+                       <div class="straight-car__inner route">
+                           <div class="straight-car__titel--wrapper">
+                               <span class="straight-car__namber">1</span>
+                               <h2 class="h2-title straight-car__subtitle">Маршрут</h2>
+                           </div>
+                           <span class="straight-car__name">Откуда</span>
+                           <input class="straight-car__input" type="text" name="from">
+                           <span class="straight-car__name">Куда</span>
+                           <input class="straight-car__input" type="text" name="to">
+                       </div><!-- /.route -->
+                       <!-- Транспорт -->
+                       <div class="straight-car__inner vehicle">
+                           <div class="straight-car__titel--wrapper">
+                               <span class="straight-car__namber">2</span>
+                               <h2 class="h2-title straight-car__subtitle">Транспорт</h2>
+                           </div>
+                           <div class="straight-car__content vehicle__content">
+                               <div class="vehicle__content--item">
+                                   <span class="straight-car__name">Грузоподъемность</span>
+                                   <div class="dropdown" id="payload"></div>
+                               </div>
+                               <div class="vehicle__content--item">
+                                   <span class="straight-car__name">Способ загрузки</span>
+                                   <div class="dropdown" id="loadingMethod"></div>
+                               </div>
+                           </div><!-- /.vehicle -->
+                       </div>
+                       <!-- Груз -->
+                       <div class="straight-car__inner cargo">
+                           <div class="straight-car__titel--wrapper">
+                               <span class="straight-car__namber">3</span>
+                               <h2 class="h2-title straight-car__subtitle">Груз</h2>
+                           </div>
+       
+                           <span class="straight-car__name ">Тип груза</span>
+                           <div class="dropdown cargo--width" id="typeOfCargo"></div>
+       
+                           <div class="straight-car__content">
+                               <div class="cargo__content--item">
+                                   <span class="straight-car__name">Класс опасности</span>
+                                   <div class="dropdown" id="hazardClass"></div>
+                               </div>
+                               <div class="cargo__content--item">
+                                   <span class="straight-car__name">Объявленная ценность <i
+                                           class="fas fa-ruble-sign"></i></span>
+                                   <input class="straight-car__input" type="text" name="to" placeholder="≥ 1">
+                               </div>
+       
+                           </div>
+                           <div class="cargo__content--item cargo--width">
+                               <label class="straight-car__vidget" for="temperature">
+                                   <input class="straight-car__name--real" type="checkbox" id="temperature">
+                                   <span class="straight-car__name--fake"> </span>
+                                   <span class="straight-car__name straight-car__name--right"> Требуется температурный
+                                       режим</span>
+                               </label>
+                           </div>
+                       </div><!-- /.cargo -->
+                       <!-- Время -->
+                       <div class="straight-car__inner time">
+                           <div class="straight-car__titel--wrapper">
+                               <span class="straight-car__namber">4</span>
+                               <h2 class="h2-title straight-car__subtitle">Время</h2>
+                           </div>
+                           <div class="time__name--row">
+                               <span class="straight-car__name time__name time__name--item">Когда прибыть на точку</span>
+                               <span class="straight-car__name time__name time__name--item">700 км в день</span>
+                           </div>
+                           <div class="time__group">
+                               <input class="straight-car__input time__input" type="text" name="from"
+                                   placeholder="Адрес не указан">
+                               <span class="time__vidget--control"></span>
+                               <div class="time__status">Не выбрано</div>
+                           </div>
+                           <div class="time__group time__group--last">
+                               <input class="straight-car__input time__input" type="text" name="from"
+                                   placeholder="Адрес не указан">
+                               <span class="time__vidget--control"></span>
+                               <div class="time__status">Не выбрано</div>
+                           </div>
+                           <span class="straight-car__name time__name time__name--item">Коментарий к заказу</span>
+                           <textarea class="time__textarea" data-autoresize name="text" id=""
+                               placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                       </div><!-- /.time -->
+                       
+                       <!-- Инструкция -->
+       
+                       <div class="instruction">
+                           <p>Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</p>
+                       </div>
+       
+                   </form>
+                   
+           </section>
+       </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

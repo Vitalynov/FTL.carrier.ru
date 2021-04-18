@@ -1,4 +1,4 @@
-export const chooseAddress = () => {
+export function chooseAddress (){
     const groups = document.querySelectorAll('.time__group'),
     inputs = document.querySelectorAll('.time__input'),
     status = document.querySelectorAll('.time__status');
@@ -14,4 +14,4 @@ export const chooseAddress = () => {
             }
         });
     });
-};
+}
